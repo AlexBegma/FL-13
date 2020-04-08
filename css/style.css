@@ -90,10 +90,10 @@ body.is-active {
 
 .nav-action.is-active .burger-line-second {
 	transform: translateY(-50%) rotate(45deg);
-
+	width: 53px;
 }
 
 .nav-action.is-active .burger-line-third {
 	transform: translateY(-50%) rotate(-45deg);
-
+	width: 53px;
 }
