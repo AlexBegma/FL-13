@@ -97,3 +97,29 @@ body.is-active {
 	transform: translateY(-50%) rotate(-45deg);
 	width: 53px;
 }
+
+.content {
+	padding: 0;
+	margin-right: 50px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	height: 98vh;
+	margin: 0;
+}
+
+.content li {
+	list-style-type: none;
+	flex-grow: 1;
+	margin: 10px;
+}
+
+.content li img {
+	width: 200px;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	border: 1px solid #000;
+	box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
