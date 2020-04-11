@@ -6,6 +6,10 @@ body.is-active {
 	overflow-x: hidden;
 }
 
+a {
+	text-decoration: none;
+}
+
 .nav {
 	position: fixed;
 	top: 0;
@@ -40,10 +44,12 @@ body.is-active {
 .main {
 	position: relative;
 	transition: .3s ease;
-}
+/* 	width: 78%;
+*/}
 
 .main.is-active {
 	left: 300px;
+	width: 78%;
 }
 
 .nav-action {
@@ -113,13 +119,31 @@ body.is-active {
 	list-style-type: none;
 	flex-grow: 1;
 	margin: 10px;
+
+
 }
 
-.content li img {
+/* .content li a {
+	position: relative;
+	width: 100%;
 	width: 200px;
 	height: 100%;
 	display: block;
-	object-fit: cover;
-	border: 1px solid #000;
-	box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+	padding-top: 100%;
+	background-color: #e0c0c0;
+	} */
+
+	.content li img {
+/* 	position: absolute;
+*/	/* top: 0;
+right: 0;
+bottom: 0;
+left: 0; */
+
+width: 200px;
+height: 100%;
+display: block;
+object-fit: cover;
+border: 1px solid #000;
+box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
 }
