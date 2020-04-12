@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Git-operation</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+
 	<link rel="shortcut icon" type="image/x-icon" href="images/icons8-github-48.png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -15,30 +17,32 @@
 <body>
 	<div class="wrapper">
 		<nav class="nav">
-			<div class="nav__header">Lorem ipsum dolor.</div>
+			<div class="nav__header">
+				<h2>Изучаем GIT / Learning GIT</h2>
+			</div>
 			<ul class="nav__list">
 				<li><a href="#commit">Коммит / Commit</a></li>
-				<li>Item # 2</li>
-				<li>Item # 3</li>
-				<li>Item # 4</li>
-				<li>Item # 5</li>
-				<li>Item # 6</li>
-				<li>Item # 7</li>
-				<li>Item # 8</li>
-				<li>Item # 9</li>
-				<li>Item # 10</li>
-				<li>Item # 11</li>
-				<li>Item # 12</li>
-				<li>Item # 13</li>
-				<li>Item # 14</li>
-				<li>Item # 15</li>
-				<li>Item # 16</li>
-				<li>Item # 17</li>
-				<li>Item # 18</li>
-				<li>Item # 19</li>
-				<li>Item # 20</li>
-				<li>Item # 21</li>
-				<li>Item # 22</li>
+				<li><a href="#branching">Ветвление в Git / Git Branching</a></li>
+				<li><a href="#BranchesandMergers">Ветки и слияния / Branches and Mergers</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
 			</ul>
 		</nav>
 		<main class="main">
@@ -48,30 +52,104 @@
 				<span class="burger-line burger-line-third"></span>
 				<span class="burger-line burger-line-fourth"></span>
 			</div>
-			<ul class="content">
-				<li id="commit"><img src="images/900.jpg" alt="Digital-World-Map"></li>
-				<li><img src="images/anemone-4997436__340.webp" alt=""></li>
-				<li><img src="images/background-4991825__340.webp" alt=""></li>
-				<li><img src="images/black-cat-4985847__340.webp" alt=""></li>
-				<li><img src="images/cat-3031684__340.webp" alt=""></li>
-				<li><img src="images/cat-4977436__340.webp" alt=""></li>
-				<li><img src="images/daisy-5009524__340.webp" alt=""></li>
-				<li><img src="images/fantasy-5013231__340.webp" alt=""></li>
-				<li><img src="images/funes-4984899__340.webp" alt=""></li>
-				<li><img src="images/goat-5003584__340.jpg" alt=""></li>
-				<li><img src="images/hope-4987283__340.webp" alt=""></li>
-				<li><img src="images/landscape-4988078__340.webp" alt=""></li>
-				<li><img src="images/landscape-4990126__340.webp" alt=""></li>
-				<li><img src="images/landscape-4991121__340.webp" alt=""></li>
-				<li><img src="images/landscape-5001172__340.webp" alt=""></li>
-				<li><img src="images/mandala-5007631__340.webp" alt=""></li>
-				<li><img src="images/nature-4988465__340.webp" alt=""></li>
-				<li><img src="images/netherlands-4918747__340.webp" alt=""></li>
-				<li><img src="images/pasqueflower-5007266__340.webp" alt=""></li>
-				<li><img src="images/peacock-feathers-5011106__340.jpg" alt=""></li>
-				<!-- <li><img src="images/pear-flower-4903458__340.webp" alt=""></li>
-				<li><img src="images/raspberries-and-blackberries-5001160__340.jpg" alt=""></li> -->
-			</ul>
+			<div class="content">
+				<div id="commit">
+					<h2>Коммиты в GIT</h2>
+					<div class="content__text">
+						<p>Коммит в git репозитории хранит снимок всех файлов в директории. Почти как огромная копия, только лучше.</p>
+						<p>Git пытается быть лёгким и быстрым насколько это только возможно, так что он не просто слепо копирует всю директорию каждый раз, а ужимает (когда это возможно) коммит в набор изменений или «дельту» между текущей версией и предыдущей.</p>
+						<p>Также Git хранит всю историю о том, когда какой коммит был сделан. Вот почему большинство коммитов имеют предков - мы указываем на предков стрелками при визуализации. Поддержка истории коммитов более чем важна для всех, кто работает над проектом!</p>
+						<p>Можно ещё долго рассказывать о коммитах, но для простоты будем считать их полными снимками проекта. Коммиты очень легки, так что переключение между ними происходит предельно быстро!</p>
+						<p>Посмотрим, как это выглядит на практике. Справа расположена визуализация небольшого git репозитория. Сейчас в нём два коммита: первый, исходный коммит С0 и один коммит С1 после него, содержащий изменения.
+						Нажми на кнопку, чтобы совершить коммит.</p>
+
+						<p>Отлично. Мы только что внесли изменения в репозиторий и сохранили их как коммит. У коммита, который мы только что сделали, есть родитель, С1, который указывает на предыдущий коммит.</p>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div id="branching">
+					<h2>Ветвление в Git</h2>
+					<div class="content__text">
+						<p>Ветки в Git, как и коммиты, невероятно легковесны. Это просто ссылки на определённый коммит — ничего более. Вот почему многие фанаты Git повторяют мантру:"делай ветки сразу, делай ветки часто".</p>
+						<p>Так как создание множества веток никак не отражается на памяти или жестком диске, удобнее и проще разбивать свою работу на много маленьких веток, чем хранить все изменения в одной огромной ветке.</p>
+						<p>Чуть позже мы попробуем использовать ветки и коммиты, и вы увидите, как две эти возможности сочетаются. Можно сказать, что созданная ветка хранит изменения текущих коммитов и всех его родителей.</p>
+
+						<p>Создадим здесь новую ветку с именем newImage:
+							git branch newImage
+						</p>
+						<p>Вот и всё, ребята! Ветка newImage теперь указывает на коммит C1.</p>
+
+						<p>Теперь попробуем сделать некоторые изменения в этой ветке. Для этого нажми кнопку ниже:
+							git commit
+						</p>
+						<p>О-оу! Ветка master сдвинулась, тогда как ветка newImage - нет! Всё из-за того, что мы не переключились на новую ветку, а остались в старой, о чём говорит звёздочка около ветки master.</p>
+
+						<p>Сообщим Git, что хотим выбрать ветку:
+							git checkout [name]
+						</p>
+						<p>Эта команда перенесёт нас на новую ветку в момент, когда мы ещё не коммитили изменения:
+							git checkout newImage; git commit
+						</p>
+						<p>Вот так! Наши изменения записаны уже в новую ветку.</p>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div id="BranchesandMergers">
+					<h2>Ветки и слияния</h2>
+					<div class="content__text">
+						<p>Ок! Мы уже знаем, как создавать ветки и коммитить наши изменения. Теперь надо понять, как объединять изменения из двух разных веток. Очень удобно создать ветку, сделать свою часть работы в ней и потом объединить изменения из своей ветки с общими.</p>
+						<p>Первый способ объединения изменений, который мы рассмотрим - это git merge - слияние или просто мердж. Слияния в Git создают особый вид коммита, который имеет сразу двух родителей. Коммит с двумя родителями обычно означает, что мы хотим объединить изменения из одного коммита с другим коммитом и всеми их родительскими коммитами.</p>
+						<p>Вот у нас две ветки, каждая содержит по одному уникальному коммиту. Это означает, что ни одна из веток не содержит полный набор "работ", выполненных в этом репозитории. Можно исправить эту ситуацию, выполнив слияние.</p>
+						<p>Мы сделаем merge ветки bugFix в ветку master:
+							git merge bugFix
+						</p>
+						<p>Что мы видим?</p>
+						<p>Во-первых, ветка master теперь указывает на коммит, у которого два родителя. Если проследовать по стрелкам от этого коммита, вы пройдёте через каждый коммит в дереве прямиком к началу. Это означает, что теперь в ветке master содержатся все изменения репозитория.</p>
+						<p>Во-вторых, обрати внимание, как изменились цвета коммитов. Мы ввели цветовую дифференциацию, чтобы помочь пониманию. У каждой ветки — свой цвет. Каждый коммит становится того цвета, какого его ветка. Если в нём изменения сразу двух веток - он становится цветом, смешанным из цветов родительских веток.</p>
+						<p>И вот мы видим, что цвет ветки master подмешан к каждому коммиту, а ветки bugFix - нет. Это можно поправить.</p>
+						<p>Смерджим ветку master в ветку bugFix:
+							git checkout bugFix;  git merge master
+						</p>
+						<p>Так как ветка bugFix была предшественницей master, Git не делал ничего, только сдвинул bugFix на тот же коммит, где находится master.</p>
+						<p>Теперь все коммиты одного цвета, что означает, что каждая ветка содержит все изменения репозитория! Поздравляем!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div id="">
+					<h2></h2>
+					<div class="content__text">
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div id="">
+					<h2></h2>
+					<div class="content__text">
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div id="">
+					<h2></h2>
+					<div class="content__text">
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div id="">
+					<h2></h2>
+					<div class="content__text">
+						<p></p>
+					</div>
+				</div>
+			</div>
 		</main>
 	</div>
 	<script src="main.js"></script>
