@@ -9,3 +9,11 @@ toggle.addEventListener('click', function() {
 	nav.classList.toggle('is-active');
 	document.body.classList.toggle('is-active');
 });
+
+window.onload = function() {
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	context.moveTo(0, 200);
+	context.lineTo(0, 0);
+	context.stroke();
+};
